@@ -47,9 +47,7 @@ class identityIdentification(object):
                 print u'系统账户信息列表:'
                 for lines in systemAuth:
                     lines = lines.strip().replace('\n', '')
-                    if lines.startswith("#"):
-                        continue
-                    else:
+                    if not lines.startswith("#"):
                         print lines
 
 
@@ -63,9 +61,7 @@ class identityIdentification(object):
                 print u'系统账户信息列表:'
                 for lines in loginDefs:
                     lines = lines.strip().replace('\n', '')
-                    if lines.startswith("#"):
-                        continue
-                    else:
+                    if not lines.startswith("#"):
                         print lines
 
         except Exception as e:

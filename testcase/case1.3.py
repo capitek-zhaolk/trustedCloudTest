@@ -12,9 +12,7 @@ class loginError(object):
                 print u'登录失败锁定策略:'
                 for lines in handle_pam_login:
                     lines = lines.strip().replace('\n', '')
-                    if lines.startswith("#"):
-                        continue
-                    else:
+                    if not lines.startswith("#"):
                         print lines
 
         except Exception as e:

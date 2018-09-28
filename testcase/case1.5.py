@@ -46,9 +46,7 @@ class rhetoricalControl(object):
                 for lines in dict_basgrc:
                     lines = lines.strip().replace('\n', '')
 
-                    if lines.startswith("#"):
-                        continue
-                    else:
+                    if not lines.startswith("#"):
                         resu = lines.split(' ')
                         for i in range(len(resu)):
                             self.dict_list[resu[0]] = resu[1:]

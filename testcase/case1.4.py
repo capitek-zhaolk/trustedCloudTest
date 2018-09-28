@@ -36,9 +36,7 @@ class transSecurity(object):
                 for lines in dict_ssh:
                     lines = lines.strip().replace('\n', '')
 
-                    if lines.startswith("#"):
-                        continue
-                    else:
+                    if not lines.startswith("#"):
                         resu = lines.split(' ')
                         for li in range(len(resu)):
                             self.dict_list[resu[0]] = resu[1:]
